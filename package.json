@@ -1,24 +1,22 @@
 {
-  "name": "customer-support-ai",
-  "version": "0.1.0",
-  "private": true,
+  "name": "respy-tech",
+  "version": "1.1.0",
+  "main": "main.js",
+  "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "esbuild src/main.js --bundle --outfile=src/dist/bundle.js",
+    "start": "esbuild src/main.js --bundle --outfile=src/dist/bundle.js --servedir=src",
+    "dev": "netlify dev"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.0",
-    "@emotion/styled": "^11.13.0",
-    "@mui/material": "^5.16.6",
-    "next": "14.2.5",
-    "openai": "^4.55.3",
-    "react": "^18",
-    "react-dom": "^18"
+    "@netlify/blobs": "^8.0.0",
+    "axios": "^1.7.2",
+    "respy-tech": "file:"
   },
   "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
-  }
+    "esbuild": "^0.14.0"
+  },
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/d44acd85-173f-495e-bb6a-9288cfac1932/deploy-status)](https://respy.tech/)",
+  "keywords": [],
+  "author": ""
 }
